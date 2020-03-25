@@ -1,0 +1,108 @@
+<!--pages/home/home.wxml-->
+
+<view class = "title-name">
+  <view class = "name">HI～I’M BAIXUE</view>
+  <view class = "professional">UI/Visual Designer</view>
+</view>
+
+<view class = "column">
+  <image class = "icon" src = "/images/work.png"></image>
+  <view class = 'text'>My Works</view>
+</view>
+
+<view class = "my-work">
+  <view class = "work-item" wx:for = "{{ workList }}" wx:key = 'index'>
+    <view class = "title">{{ item.name }}</view>
+    <image class = "icon" src = "{{ item.icon }}"></image>
+  </view>
+</view>
+
+<view class = "column">
+  <image class = "icon" src = "/images/about.png"></image>
+  <view class = 'text'>About Me</view>
+</view>
+
+<view class = "my-info">
+  <view class = "photo-box">
+    <image class = "photo" src = "{{ userInfo.pboto }}"></image>
+    <view class = "name-box">
+      <view class = "text">{{ userInfo.name }}</view>
+      <view class = "work">{{ userInfo.work }}</view>
+    </view>
+  </view>
+
+  <view class = "info-one info-1">
+    <view class = "my-info-icon-box"><image class = "my-info-itme-icon" src = '/images/site.png'></image></view>
+    <view class = "text">籍贯：{{ userInfo.city }}</view>
+  </view>
+
+ <view class = "info-one info-2">
+    <image class = "my-info-itme-icon" src = '/images/education.png'></image>
+    <view class = "text">专业：{{ userInfo.major }}</view>
+  </view>
+
+  <view class = "info-one info-3">
+    <image class = "my-info-itme-icon" src = '/images/school.png'></image>
+    <view class = "text">学校：{{ userInfo.school }}</view>
+  </view>
+
+  <view class = "my-talk">{{ userInfo.myTalk }}</view>
+</view>
+
+<view class = "column">
+  <image class = "icon" src = "/images/work_3.png"></image>
+  <view class = 'text'>Work Experience</view>
+</view>
+
+
+<view class = "work-exp" wx:for = '{{ userInfo.workExp }}' wx:key = 'index'>
+  <view class = "info">
+    <view class = "time">{{ item.time }}</view>
+    <image class = "exp-btn" src = "/images/exp_icon.png"></image>
+  </view>
+  <view class = "company-info">
+    <image class = "logo" src = "{{ item.companyLogo }}"></image>
+    <view class = "name">{{ item.companyName }}</view>
+  </view>
+</view>
+
+<view class = "column">
+  <image class = "icon" src = "/images/phone1.png"></image>
+  <view class = 'text'>Contact Me</view>
+</view>
+
+<view class = "call-me">
+  <view class = "phone">
+    <image class = "icon" src = '/images/phone2.png'></image>
+    <view class = "name">电话：</view>
+    <view class = "text">{{ userInfo.phone }}</view>
+  </view>
+
+  <view class = "phone">
+    <image class = "icon"  src = '/images/email.png'></image>
+    <view class = "name">邮箱：</view>
+    <view class = "text">{{ userInfo.email }}</view>
+  </view>
+
+
+  <view class = "phone wx">
+    <view class = "wx-title">
+      <image class = "icon"  src = '/images/weixin.png'></image>
+      <view class = "name">微信：</view>
+    </view>
+    <view class = "evm">
+      <image class = "img" src = "{{ userInfo.evm }}"></image>
+      <view class = "text">扫码添加微信</view>
+    </view>
+  </view>
+</view>
+
+<view class = "call-me-btn" bindtap = "call">
+  <view class = "call-me-btn-inner">
+    <image class = "call-me-icon" src = '/images/phone3.png'></image>
+    <view class = "call-me-btn-text">与我联系</view>
+  </view> 
+</view>
+
+
+<view class="mask"></view>
