@@ -16,6 +16,10 @@ page {
   margin-bottom: 80rpx;
 }
 
+.title-name .name {
+  white-space: nowrap;
+}
+
 .professional {
   width: 260rpx;
   height: 42rpx;
