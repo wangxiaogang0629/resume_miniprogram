@@ -92,9 +92,16 @@ Page({
    * 打电话
    */
   call: function () {
-    wx.makePhoneCall({
-      phoneNumber: this.data.userInfo.phone //仅为示例，并非真实的电话号码
-    })
+    // wx.makePhoneCall({
+    //   phoneNumber: this.data.userInfo.phone //仅为示例，并非真实的电话号码
+    // })
+
+    // wx.requestSubscribeMessage({
+    //   tmplIds: ['6OU1apCDjY83m0CKXu0lG_nzAsF5JueWxVpTYP6vcFo'],
+    //   success(res) {
+    //     console.log('ceshi', res)
+    //   }
+    // })
 
     // this.showInfo()
 
