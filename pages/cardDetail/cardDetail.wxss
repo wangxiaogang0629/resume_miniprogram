@@ -44,6 +44,8 @@ page {
   height: 36rpx;
 }
 
+/* 分享 */
+
 .shareBox {
   height: 0;
   overflow: hidden;

@@ -1,12 +1,36 @@
-<view class="moduleName">{{ module.name }}</view>
-<view class="card" wx:for = "{{ workList }}" wx:key = "index">
-  <image lazy-load
-    class="img" src="{{imgUrl + item.url}}" bindtap="cardDetail" data-info="{{item}}"></image>
-  <view class="info">
-    <view class="text">
-      <text class="title">{{ item.title }}</text>
-      <text class="type">{{ item.type }}</text>
+<view class="{{isShowShare ? 'imgList imgListNoMove' : 'imgList' }}">
+  <view class="moduleName">{{ module.name }}</view>
+  <view class="card" wx:for = "{{ workList }}" wx:key = "index">
+    <image lazy-load
+      class="img" src="{{imgUrl + item.url}}" bindtap="cardDetail" data-info="{{item}}"></image>
+    <view class="info">
+      <view class="text">
+        <text class="title">{{ item.title }}</text>
+        <text class="type">{{ item.type }}</text>
+      </view>
+      <image class="share" src='/images/share.png' bindtap="showShare" data-info="{{item}}"></image>        
     </view>
-    <image class="share" src='/images/share.png'></image>
+  </view>
+</view>
+
+<view class="{{isShowShare ? 'shareBox shareBoxAct' : 'shareBox' }}">
+  <view class="creatPosters" bindtap="postersFunc">
+    <image class="icon" src="{{postersBtn.icon}}"></image>
+    <view class="iconText">{{postersBtn.text}}</view>
+  </view>
+
+  <view class="shareWx" bindtap="shareWxFun">
+    <image class="icon" src="/images/sharebtn2.png"></image>
+    <view class="iconText">微信好友</view>
+    <button open-type = 'share' class="shareBtn"/>
+  </view>
+</view>
+
+<view class="mask" wx:if="{{isShowShare}}" bindtap="closeShare"></view>
+
+<view class="posterBox" wx:if="{{showPoster}}" bindtap="closePoster">
+  <view class="posterBoxInner">
+    <image class="posterBoxImg" src="{{posterImg}}"></image>
+    <image class="evm" src="/images/weixin.png"></image>
   </view>
 </view>

@@ -29,7 +29,7 @@
 
 <view class="mask" wx:if="{{isShowShare}}" bindtap="closeShare"></view>
 
-<view class="posterBox" wx:if="{{showPoster}}">
+<view class="posterBox" wx:if="{{showPoster}}" bindtap="closePoster">
   <view class="posterBoxInner">
     <image class="posterBoxImg" src="{{posterImg}}"></image>
     <image class="evm" src="/images/weixin.png"></image>

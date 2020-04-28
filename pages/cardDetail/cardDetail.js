@@ -77,36 +77,28 @@ Page({
       console.log('this.data.detail.name', this.data.detail.name)
       this.setData({
         postersBtn: {
-          icon: '/images/sharebtn1.png',
-          text: '保存',
+          icon: '/images/loading.svg',
+          text: '生成中',
         },
         showPoster: true,
         posterImg: this.data.detail.name + '0.png'
-      })
-    } else {
-      let str = this.data.detail.name + '0.png';
+      }, () => {
+        setTimeout(() => {
+          this.setData({
+            postersBtn: {
+              icon: '/images/sharebtn1.png',
+              text: '生成海报',
+            },
+            showPoster: false,
+            posterImg: this.data.detail.name + '0.png'
+          });
+          let str = this.data.detail.name + '0.png';
 
-      wx.previewImage({
-        current: str, // 当前显示图片的http链接
-        urls: [str] // 需要预览的图片http链接列表
-      })
-
-      return
-      wx.downloadFile({
-        url: imgUrl + '1-2-' + '0.png', //仅为示例，并非真实的资源
-        success (res) {
-          
-          if (res.statusCode === 200) {
-            console.log('down success', res)
-
-            wx.saveImageToPhotosAlbum({
-              filePath: res.tempFilePath,
-              success: (res) => {
-                console.log('baocun success', res)
-              }
-            })
-          }
-        }
+          wx.previewImage({
+            current: str, // 当前显示图片的http链接
+            urls: [str] // 需要预览的图片http链接列表
+          })
+        }, 1000)
       })
     }
   },
@@ -115,6 +107,10 @@ Page({
     wx.showShareMenu({
       withShareTicket: true
     })
+  },
+
+  closePoster: function() {
+    this.setData({ isShowShare: false, showPoster: false })
   }
 
 })
