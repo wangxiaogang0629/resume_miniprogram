@@ -1,0 +1,158 @@
+/* pages/ cardDetail/cardDetail.wxss */
+page {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.img {
+  width: 100%;
+}
+
+.btn {
+  position: fixed;
+  right: 40rpx;
+  bottom: 120rpx;
+  width: 240rpx;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.like, .share {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background:rgba(50,51,55,1);
+  box-shadow:0px 0px 10px 0px rgba(50,51,55,0.17);
+}
+
+.like {
+  background: #fff;
+}
+
+.likeIcon {
+  width: 38rpx;
+  height: 34rpx;
+}
+
+.shareIcon {
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.shareBox {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background:rgba(255,255,255,1);
+  box-shadow:0px -4rpx 40rpx 0px rgba(50,51,55,0.1);
+  border-radius: 32rpx 32rpx 0px 0px;
+}
+
+.shareBoxAct {
+  height: 260rpx;
+  padding: 40rpx 200rpx;
+}
+
+.creatPosters, .shareWx {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shareBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100rpx !important;
+  width: 100rpx !important;
+  margin: 0;
+  padding: 0;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.shareBtn::after {
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.creatPosters .icon, .shareWx .icon {
+  height: 100rpx;
+  width: 100rpx;
+  margin-bottom: 8rpx;
+}
+
+.iconText {
+  font-size: 24rpx;
+  font-weight: 400;
+  color:rgba(50,51,55,0.4);
+  line-height: 34rpx;
+}
+
+.mask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background:rgba(0,0,0,0.3);
+}
+
+.posterBox {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  width: 100%;
+  height: calc(100% - 260rpx);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.posterBoxInner {
+  width: 660rpx;
+  height: 720rpx;
+  position: relative;
+}
+
+.posterBoxImg {
+  width: 660rpx;
+  height: 720rpx;
+}
+
+.evm {
+  position: absolute;
+  width: 140rpx;
+  height: 140rpx;
+  right: 40rpx;
+  bottom: 40rpx;
+  border-radius: 50%;
+}
+
+.imgList {
+  height: 100%;
+  width: 100%;
+}
+
+.imgListNoMove {
+  overflow: hidden;
+}
+
+

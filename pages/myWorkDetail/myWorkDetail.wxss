@@ -1,0 +1,70 @@
+
+page {
+  padding: 0 40rpx;
+}
+
+.moduleName {
+  width: 100%;
+  height: 160rpx;
+  background: rgba(255,255,255,1);
+  font-size: 60rpx;
+  font-weight: blod;
+  color:rgba(44,62,91,1);
+  line-height: 160rpx;
+}
+
+.card {
+  width: 100%;
+  height: 554rpx;
+  background:rgba(255,255,255,1);
+  box-shadow:0px 4rpx 8rpx 0px rgba(231,232,233,1);
+  border-radius: 16rpx;
+  margin-bottom: 60rpx;
+}
+
+.card:last-child {
+  margin-bottom: 180rpx;
+}
+
+.img {
+  width: 670rpx;
+  height: 420rpx;
+}
+
+.info {
+  width: 100%;
+  height: 134rpx;
+  padding: 20rpx 16rpx 20rpx 40rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  height: 50rpx;
+  font-size: 36rpx;
+  font-weight: bold;
+  color:rgba(44,62,91,1);
+  line-height: 50rpx;
+  text-shadow:0px 4rpx 8rpx rgba(231,232,233,1);
+  margin-bottom: 10rpx;
+}
+
+.type {
+  height: 34rpx;
+  font-size: 24rpx;
+  color:rgba(146,151,163,1);
+  line-height: 34rpx;
+  text-shadow:0px 4rpx 8rpx rgba(231,232,233,1);
+}
+
+.share {
+  height: 46rpx;
+  width: 46rpx;
+}
+

@@ -11,7 +11,8 @@
 </view>
 
 <view class = "my-work">
-  <view class = "work-item" wx:for = "{{ workList }}" wx:key = 'index'>
+  <view class = "work-item" wx:for = "{{ workList }}" wx:key = 'index' bindtap = "myWorkClick"
+    data-info = "{{item.id}}">
     <view class = "title">{{ item.name }}</view>
     <image class = "icon" src = "{{ item.icon }}"></image>
   </view>
@@ -91,7 +92,7 @@
       <view class = "name">微信：</view>
     </view>
     <view class = "evm">
-      <image class = "img" src = "{{ userInfo.evm }}"></image>
+      <image class = "img" src = "{{ userInfo.evm }}" show-menu-by-longpress></image>
       <view class = "text">扫码添加微信</view>
     </view>
   </view>

@@ -9,20 +9,24 @@ Page({
   data: {
     workList: [
       {
+        id: 1,
         name: 'UI',
         icon: '/images/UI.png',
       },
       {
+        id: 2,
         name: '插画',
         icon: '/images/chahua.png',
       },
       {
-        name: '网页',
-        icon: '/images/web.png',
-      },
-      {
+        id: 3,
         name: '平面',
         icon: '/images/work_1.png',
+      },
+      {
+        id: 4,
+        name: '网页',
+        icon: '/images/web.png',
       }
     ],
 
@@ -92,16 +96,9 @@ Page({
    * 打电话
    */
   call: function () {
-    // wx.makePhoneCall({
-    //   phoneNumber: this.data.userInfo.phone //仅为示例，并非真实的电话号码
-    // })
-
-    // wx.requestSubscribeMessage({
-    //   tmplIds: ['6OU1apCDjY83m0CKXu0lG_nzAsF5JueWxVpTYP6vcFo'],
-    //   success(res) {
-    //     console.log('ceshi', res)
-    //   }
-    // })
+    wx.makePhoneCall({
+      phoneNumber: this.data.userInfo.phone
+    })
 
     // this.showInfo()
 
@@ -115,6 +112,19 @@ Page({
         'http://www.wxgblog.com/img/img4.png',
         'http://www.wxgblog.com/img/img5.png'
       ] // 需要预览的图片http链接列表
+    })
+  },
+
+  /**
+   * 
+   */
+  myWorkClick(e) {
+    let type = e.currentTarget.dataset.info;
+
+    console.log(type, e)
+
+    wx.navigateTo({
+      url: '/pages/myWorkDetail/myWorkDetail?type=' + type,
     })
   }
 

@@ -1,7 +1,11 @@
 {
   "pages": [
     "pages/home/home",
+
+    "pages/cardDetail/cardDetail",
+    "pages/myWorkDetail/myWorkDetail",
     "pages/logs/logs"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",

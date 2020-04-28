@@ -1,0 +1,37 @@
+<!--pages/ cardDetail/cardDetail.wxml-->
+<view class="{{isShowShare ? 'imgList imgListNoMove' : 'imgList' }}">
+  <image
+  lazy-load
+  class="img" wx:for = "{{ detail.list }}" src="{{detail.name + (index + 1)}}.png" wx:key="index" mode="widthFix"></image>
+</view>
+
+<view class="btn">
+  <view class="like">
+    <image class="likeIcon" src="/images/heart2.png"></image>
+  </view>
+  <view class="share" bindtap="showShare">
+    <image class="shareIcon" src="/images/share1.png"></image>
+  </view>
+</view>
+
+<view class="{{isShowShare ? 'shareBox shareBoxAct' : 'shareBox' }}">
+  <view class="creatPosters" bindtap="postersFunc">
+    <image class="icon" src="{{postersBtn.icon}}"></image>
+    <view class="iconText">{{postersBtn.text}}</view>
+  </view>
+
+  <view class="shareWx" bindtap="shareWxFun">
+    <image class="icon" src="/images/sharebtn2.png"></image>
+    <view class="iconText">微信好友</view>
+    <button open-type = 'share' class="shareBtn"/>
+  </view>
+</view>
+
+<view class="mask" wx:if="{{isShowShare}}" bindtap="closeShare"></view>
+
+<view class="posterBox" wx:if="{{showPoster}}">
+  <view class="posterBoxInner">
+    <image class="posterBoxImg" src="{{posterImg}}"></image>
+    <image class="evm" src="/images/weixin.png"></image>
+  </view>
+</view>

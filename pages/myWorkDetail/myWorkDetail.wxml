@@ -1,0 +1,12 @@
+<view class="moduleName">{{ module.name }}</view>
+<view class="card" wx:for = "{{ workList }}" wx:key = "index">
+  <image lazy-load
+    class="img" src="{{imgUrl + item.url}}" bindtap="cardDetail" data-info="{{item}}"></image>
+  <view class="info">
+    <view class="text">
+      <text class="title">{{ item.title }}</text>
+      <text class="type">{{ item.type }}</text>
+    </view>
+    <image class="share" src='/images/share.png'></image>
+  </view>
+</view>
