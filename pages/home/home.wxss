@@ -363,3 +363,95 @@ page {
   top: -100rpx;
   right: 0;
 } */
+
+.project {
+  width: 670rpx;
+  background: #fff;
+  border-radius: 50rpx;
+  padding: 40rpx 40rpx 160rpx 10rpx;
+}
+
+.titleBox {
+  display: flex;
+  align-items: center;
+  height: 160rpx;
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+
+.titleBox .logo {
+  height: 160rpx;
+  width: 160rpx;
+}
+
+.info .name {
+  height: 44rpx;
+  line-height: 44rpx;
+  font-size:16px;
+  font-weight: bold;
+  color: #323337;
+}
+
+.info .time {
+  height: 34rpx;
+  line-height: 34rpx;
+  font-size: 12px;
+  color: #9297A3;
+}
+
+.h1 {
+  height: 44rpx;
+  line-height: 44rpx;
+  font-size:16px;
+  padding-left: 30rpx;
+  display: flex;
+  margin-bottom: 20rpx;
+  color: #9297A3;
+}
+
+.des {
+  padding-left: 30rpx;
+}
+
+.des .point {
+  width: 10rpx;
+  height: 10rpx;
+  background:rgba(58,124,254,1);
+  border-radius: 50%;
+  margin-right: 20rpx;
+  margin-top: 20rpx;
+}
+
+.des .text {
+  width: 280rpx;
+  margin-top: 20rpx;
+  word-wrap: break-word;
+  color: #9297A3;
+  font-size: 12px;
+}
+
+.projectName {
+  height: 44rpx;
+  line-height: 44rpx;
+  font-size:16px;
+  padding-left: 30rpx;
+  display: flex;
+  margin-bottom: 10rpx;
+  color: #2C3E5B;
+}
+
+.text1 {
+  margin-right: 40rpx;
+}
+
+.text2 {
+  color: #9297A3;
+}
+
+.content {
+  width: 100%;
+  font-size:16px;
+  word-wrap: break-word;
+  padding-left: 30rpx;
+  color: #9297A3;
+}
