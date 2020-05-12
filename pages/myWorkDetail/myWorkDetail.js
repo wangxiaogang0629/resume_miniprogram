@@ -75,10 +75,12 @@ Page({
 
     switch(options.type) {
       case '1': name = 'UI'; break;
-      case '2': name = '插画'; break;
-      case '3': name = '平面'; break;
+      case '2': name = '平面'; break;
+      case '3': name = '插画'; break;
       case "4": name = '网页'; break;
     }
+
+    wx.setNavigationBarTitle({ title: name })
 
     console.log(options.type)
     

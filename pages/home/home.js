@@ -15,13 +15,13 @@ Page({
       },
       {
         id: 2,
-        name: '插画',
-        icon: '/images/chahua.png',
+        name: '平面',
+        icon: '/images/work_1.png',
       },
       {
         id: 3,
-        name: '平面',
-        icon: '/images/work_1.png',
+        name: '插画',
+        icon: '/images/chahua.png',
       },
       {
         id: 4,

@@ -98,7 +98,8 @@ page {
 .photo-box {
   display: flex;
   align-items: center;
-  height: 160rpx
+  height: 160rpx;
+  margin-bottom: 40rpx;
 }
 
 .photo {
@@ -331,7 +332,7 @@ page {
   height: 102rpx;
   background:rgba(74,116,255,1);
   border-radius: 16rpx;
-  margin: 80rpx 0;
+  margin: 80rpx 0 120rpx 0;
 }
 
 .call-me-icon {
