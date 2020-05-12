@@ -17,6 +17,10 @@ Page({
     },
     showPoster: false,
     posterImg: '',
+    animationData: {},
+    animationData1: {},
+    heartImg: 2,
+    opacity: 0,
   },
 
   /**
@@ -89,7 +93,7 @@ Page({
               icon: '/images/sharebtn1.png',
               text: '生成海报',
             },
-            showPoster: false,
+            // showPoster: false,
             posterImg: this.data.detail.name + '0.png'
           });
           let str = this.data.detail.name + '0.png';
@@ -111,6 +115,42 @@ Page({
 
   closePoster: function() {
     this.setData({ isShowShare: false, showPoster: false })
-  }
+  },
 
+  like: function () {
+    let animation = wx.createAnimation({
+      transformOrigin: '19rpx 34rpx',
+      duration: 80
+    });
+
+    animation = animation.rotate(-25).step().rotate(0).step().scale(1.05).step().scale(1.0).step().export()
+
+    let animation1 = wx.createAnimation({
+      transformOrigin: '11rpx 10rpx'
+    });
+
+    animation1 = animation1.scale(1.1).step({
+      duration: 150,
+    }).scale(1.11).step({
+      duration: 100,
+    }).scale(0.01).step({
+      duration: 100
+    }).export()
+
+    if (this.data.heartImg == 1) {
+      this.setData({ heartImg: 2, opacity: 0 })
+      return;
+    }
+    this.setData({ animationData: animation }, () => {
+      setTimeout(() => {
+        this.setData({ heartImg: 1, opacity: 1 }, () => {
+
+          setTimeout(() => {
+            this.setData({ animationData1: animation1 })
+          }, 100)
+        })
+      }, 80)
+    });
+
+  }
 })

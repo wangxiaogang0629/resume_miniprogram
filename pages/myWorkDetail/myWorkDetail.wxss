@@ -168,10 +168,10 @@ page {
 
 .evm {
   position: absolute;
-  width: 140rpx;
-  height: 140rpx;
-  right: 40rpx;
-  bottom: 40rpx;
+  width: 130rpx;
+  height: 130rpx;
+  right: 45rpx;
+  bottom: 45rpx;
   border-radius: 50%;
 }
 

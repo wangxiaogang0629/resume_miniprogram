@@ -354,21 +354,29 @@ page {
   display: flex;
 }
 
-/* .mask {
+.mask {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 160rpx 0;
   height: 1334rpx;
   width: 750rpx;
-  background: #000;
-  opacity: 0.3;
+  background: rgba(0, 0 ,0 , 0.3);
   position: fixed;
   top: -100rpx;
   right: 0;
-} */
+}
 
-.project {
+.mask-inner {
   width: 670rpx;
   background: #fff;
   border-radius: 50rpx;
-  padding: 40rpx 40rpx 160rpx 10rpx;
+  padding: 40rpx 40rpx 90rpx 40rpx;
+}
+
+.project {
+  height: 100%;
+  overflow-y: scroll;
 }
 
 .titleBox {
@@ -380,8 +388,10 @@ page {
 }
 
 .titleBox .logo {
-  height: 160rpx;
-  width: 160rpx;
+  padding: 70rpx 0;
+  height: 70rpx;
+  width: 70rpx;
+  margin-right: 40rpx;
 }
 
 .info .name {
@@ -403,14 +413,18 @@ page {
   height: 44rpx;
   line-height: 44rpx;
   font-size:16px;
-  padding-left: 30rpx;
   display: flex;
   margin-bottom: 20rpx;
   color: #9297A3;
 }
 
+.h2 {
+  margin-top: 40rpx;
+}
+
 .des {
-  padding-left: 30rpx;
+  margin-bottom: 20rpx;
+  display: flex;
 }
 
 .des .point {
@@ -424,34 +438,39 @@ page {
 
 .des .text {
   width: 280rpx;
-  margin-top: 20rpx;
   word-wrap: break-word;
   color: #9297A3;
-  font-size: 12px;
+  font-size: 14px;
+  flex: 1;
 }
 
 .projectName {
   height: 44rpx;
   line-height: 44rpx;
   font-size:16px;
-  padding-left: 30rpx;
   display: flex;
   margin-bottom: 10rpx;
   color: #2C3E5B;
 }
 
 .text1 {
+  font-size:14px;
   margin-right: 40rpx;
 }
 
 .text2 {
+  font-size:14px;
   color: #9297A3;
 }
 
 .content {
   width: 100%;
-  font-size:16px;
+  font-size:14px;
   word-wrap: break-word;
-  padding-left: 30rpx;
   color: #9297A3;
+  margin-bottom: 4rpx;
+}
+
+.projectCard {
+  margin-bottom: 30rpx;
 }

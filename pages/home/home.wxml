@@ -56,7 +56,7 @@
 </view>
 
 
-<view class = "work-exp" wx:for = '{{ userInfo.workExp }}' wx:key = 'index' bindtap="showWorkDetail" data-info = "{{item}}">
+<view class = "work-exp" wx:for = '{{ userInfo.workExp }}' wx:key = 'index' bindtap="showWorkExp" data-info = "{{item}}">
   <view class = "info">
     <view class = "time">{{ item.time }}</view>
     <image class = "exp-btn" src = "/images/exp_icon.png"></image>
@@ -106,32 +106,34 @@
 </view>
 
 
-<view class="mask"></view>
+<view class="mask" bindtap="closeWorkExp" wx:if="{{isShowWorkExp}}">
+  <view class="mask-inner" style="height: {{ userInfo.workExp[showWorkExpId].project ? '100%' : 'auto'}};">
+    <view class="project">
+      <view class="titleBox">
+        <image class="logo" mode="aspectFit" src="{{userInfo.workExp[showWorkExpId].companyLogo}}"></image>
+        <view class="info">
+          <view class="name">{{userInfo.workExp[showWorkExpId].companyName}}</view>
+          <view class="time">{{userInfo.workExp[showWorkExpId].time}}</view>
+        </view>
+      </view>
 
-<view class="project">
-  <view class="titleBox">
-    <image class="logo" mode="aspectFit" src="{{userInfo.workExp[0].companyLogo}}"></image>
-    <view class="info">
-      <view class="name">{{userInfo.workExp[0].companyName}}</view>
-      <view class="time">{{userInfo.workExp[0].time}}</view>
-    </view>
-  </view>
+      <view class="h1">工作描述</view>
+      <view class="des" wx:for="{{userInfo.workExp[showWorkExpId].des}}" wx:key="index">
+        <view class="point"></view>
+        <view class="text">{{item}}</view>
+      </view>
 
-  <view class="h1">工作描述</view>
-  <view class="des" wx:for="{{userInfo.workExp[0].des}}" wx:key="index">
-    <view class="point"></view>
-    <view class="text">{{item}}</view>
-  </view>
+      <view class="h1 h2" wx:if="{{userInfo.workExp[showWorkExpId].project}}">部分项目经验</view>
 
-  <view class="h1">部分项目经验</view>
-
-  <view wx:for="{{userInfo.workExp[0].project}}" wx:key="index">
-    <view class="projectName">
-      <view class="text1">{{item.title}}</view>
-      <view class="text2">{{item.type}}</view>
-    </view>
-    <view class="content" wx:for="{{item.content}}" wx:key="index" wx:item="itemContent">
-      {{itemContent}}
+      <view wx:for="{{userInfo.workExp[showWorkExpId].project}}" wx:key="index" class="projectCard">
+        <view class="projectName">
+          <view class="text1">{{item.title}}</view>
+          <view class="text2">{{item.type}}</view>
+        </view>
+        <view class="content" wx:for="{{item.content}}" wx:key="index" wx:for-item="itemContent">
+          {{itemContent}}
+        </view>
+      </view>
     </view>
   </view>
 </view>

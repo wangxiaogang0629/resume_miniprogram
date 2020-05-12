@@ -32,11 +32,22 @@ page {
 
 .like {
   background: #fff;
+  position: relative;
 }
 
 .likeIcon {
   width: 38rpx;
   height: 34rpx;
+}
+
+.likeIcon-3 {
+  height: 22rpx;
+  width: 20rpx;
+  position: absolute;
+  top: 18rpx;
+  right: 19rpx;
+  transform: rotate(3deg);
+  transform: scale(0);
 }
 
 .shareIcon {
@@ -141,10 +152,10 @@ page {
 
 .evm {
   position: absolute;
-  width: 140rpx;
-  height: 140rpx;
-  right: 40rpx;
-  bottom: 40rpx;
+  width: 130rpx;
+  height: 130rpx;
+  right: 45rpx;
+  bottom: 45rpx;
   border-radius: 50%;
 }
 

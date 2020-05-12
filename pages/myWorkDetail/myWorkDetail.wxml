@@ -31,6 +31,6 @@
 <view class="posterBox" wx:if="{{showPoster}}" bindtap="closePoster">
   <view class="posterBoxInner">
     <image class="posterBoxImg" src="{{posterImg}}"></image>
-    <image class="evm" src="/images/weixin.png"></image>
+    <image class="evm" src="/images/mini_evm.jpg"></image>
   </view>
 </view>

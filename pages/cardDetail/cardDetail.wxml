@@ -6,8 +6,9 @@
 </view>
 
 <view class="btn">
-  <view class="like">
-    <image class="likeIcon" src="/images/heart2.png"></image>
+  <view class="like" bindtap="like">
+    <image class="likeIcon-3" src="/images/heart3.png" animation="{{animationData1}}" style="opacity: {{opacity}}"></image>
+    <image id="like" class="likeIcon" src="/images/heart{{heartImg}}.png" animation='{{animationData}}'></image>
   </view>
   <view class="share" bindtap="showShare">
     <image class="shareIcon" src="/images/share1.png"></image>
@@ -32,6 +33,6 @@
 <view class="posterBox" wx:if="{{showPoster}}" bindtap="closePoster">
   <view class="posterBoxInner">
     <image class="posterBoxImg" src="{{posterImg}}"></image>
-    <image class="evm" src="/images/weixin.png"></image>
+    <image class="evm" src="/images/mini_evm.jpg"></image>
   </view>
 </view>
